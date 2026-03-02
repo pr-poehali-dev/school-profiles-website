@@ -5,34 +5,40 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 150 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 150 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 150 20% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 145 52% 32%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 140 30% 94%;
+    --secondary-foreground: 145 52% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 140 20% 95%;
+    --muted-foreground: 150 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 145 40% 88%;
+    --accent-foreground: 145 52% 22%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 140 20% 88%;
+    --input: 140 20% 88%;
+    --ring: 145 52% 32%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    --green-light: #f0faf3;
+    --green-mid: #d1f0da;
+    --green-main: #2d8a4e;
+    --green-dark: #1a5c33;
+    --green-accent: #4caf6e;
 
     --sidebar-background: 0 0% 98%;
 
@@ -97,5 +103,62 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Golos Text", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Golos Text", sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .section-card {
+    @apply bg-white rounded-2xl shadow-sm border border-green-100 p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-green-800 hover:text-green-600 transition-colors duration-200 relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 transition-all duration-200;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
   }
 }
