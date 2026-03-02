@@ -6,40 +6,52 @@ type AnyIcon = any;
 
 const profiles = [
   {
-    id: "tech",
-    icon: "Cpu",
+    id: "fizmat",
+    icon: "Calculator",
     color: "bg-emerald-50 border-emerald-200",
     badge: "bg-emerald-100 text-emerald-800",
-    title: "Технологический",
-    subjects: ["Математика (углублённо)", "Физика", "Информатика", "Химия"],
-    desc: "Для будущих инженеров, программистов и учёных. Углублённое изучение точных наук и современных технологий.",
+    title: "ФИЗМАТ",
+    subjects: ["Математика (углублённо)", "Физика (углублённо)", "Химия", "Информатика"],
+    desc: "Профиль для тех, кто мыслит формулами и открывает законы мира. Готовит к поступлению в технические вузы: МФТИ, МГУ, Бауманка, политехнические университеты.",
+    history: [
+      { year: "1998", event: "Открытие физико-математического класса — первого профильного класса в школе. Набор составил 25 учеников." },
+      { year: "2005", event: "Первые победители городской олимпиады по физике среди учеников физмат-профиля. Класс получил статус углублённого." },
+      { year: "2012", event: "Установлено современное оборудование: физические лаборатории, 3D-моделирование, робототехника." },
+      { year: "2019", event: "100% поступление выпускников физмат-профиля в технические вузы — рекорд за всю историю профиля." },
+      { year: "2023", event: "Введён курс по искусственному интеллекту и машинному обучению как дополнительный модуль профиля." },
+    ],
+  },
+  {
+    id: "infmat",
+    icon: "Cpu",
+    color: "bg-teal-50 border-teal-200",
+    badge: "bg-teal-100 text-teal-800",
+    title: "ИНФМАТ",
+    subjects: ["Математика (углублённо)", "Информатика (углублённо)", "Физика", "Английский язык"],
+    desc: "Профиль для будущих программистов, аналитиков и IT-специалистов. Сочетание глубокой математики с практическим программированием и алгоритмикой.",
+    history: [
+      { year: "2003", event: "Запуск информационно-математического профиля — ответ на растущий спрос рынка труда в сфере IT." },
+      { year: "2008", event: "Открытие специализированного компьютерного класса с 30 рабочими местами и выходом в интернет." },
+      { year: "2014", event: "Партнёрство с IT-компаниями города: стажировки для старшеклассников и мастер-классы от практикующих разработчиков." },
+      { year: "2020", event: "Переход на дистанционное обучение во время пандемии прошёл бесшовно — профиль уже имел всю цифровую инфраструктуру." },
+      { year: "2024", event: "Введение курсов по Python, веб-разработке и работе с базами данных в рамках основной программы профиля." },
+    ],
   },
   {
     id: "hum",
     icon: "BookOpen",
-    color: "bg-teal-50 border-teal-200",
-    badge: "bg-teal-100 text-teal-800",
-    title: "Гуманитарный",
-    subjects: ["Русский язык (углублённо)", "История", "Обществознание", "Литература"],
-    desc: "Для тех, кто любит слова, историю и общество. Подготовка к юридическим, педагогическим и журналистским специальностям.",
-  },
-  {
-    id: "nat",
-    icon: "Leaf",
     color: "bg-green-50 border-green-200",
     badge: "bg-green-100 text-green-800",
-    title: "Естественнонаучный",
-    subjects: ["Биология (углублённо)", "Химия (углублённо)", "География", "Математика"],
-    desc: "Для будущих врачей, биологов, экологов. Глубокое погружение в науки о жизни и природе.",
-  },
-  {
-    id: "soc",
-    icon: "Users",
-    color: "bg-lime-50 border-lime-200",
-    badge: "bg-lime-100 text-lime-800",
-    title: "Социально-экономический",
-    subjects: ["Экономика", "Обществознание (углублённо)", "Право", "Математика"],
-    desc: "Для экономистов, управленцев и юристов. Понимание общества, финансов и правовых основ.",
+    title: "ГУМАНИТАРНЫЙ",
+    subjects: ["Русский язык (углублённо)", "Литература (углублённо)", "История", "Обществознание", "Иностранный язык"],
+    desc: "Профиль для тех, кто думает словами, чувствует историю и понимает людей. Подготовка к юридическим, педагогическим, журналистским и международным специальностям.",
+    history: [
+      { year: "2001", event: "Открытие гуманитарного профиля с акцентом на русскую словесность и историю. Первый набор — 28 человек." },
+      { year: "2007", event: "Введение второго иностранного языка (французский / немецкий) как обязательного предмета профиля." },
+      { year: "2011", event: "Создание школьного театра и медиаклуба — творческих площадок для учеников гуманитарного профиля." },
+      { year: "2016", event: "Выпускники профиля впервые заняли призовые места на всероссийской олимпиаде по истории и праву." },
+      { year: "2022", event: "Запуск курса по риторике, медиаграмотности и основам журналистики. Профиль охватывает широкий спектр гуманитарных дисциплин." },
+    ],
   },
 ];
 
@@ -51,7 +63,7 @@ const admissionSteps = [
 ];
 
 const facts = [
-  { icon: "GraduationCap", num: "4", label: "профиля обучения", sub: "на выбор" },
+  { icon: "GraduationCap", num: "3", label: "профиля обучения", sub: "на выбор" },
   { icon: "Trophy", num: "87%", label: "выпускников поступают", sub: "в ВУЗы с первого раза" },
   { icon: "Star", num: "15+", label: "лет опыта", sub: "профильного образования" },
   { icon: "BookMarked", num: "200+", label: "учеников", sub: "обучается сейчас" },
@@ -99,7 +111,6 @@ const history = [
 
 const navItems = [
   { id: "profiles", label: "Профили" },
-  { id: "history", label: "История" },
   { id: "facts", label: "Факты" },
   { id: "admission", label: "Поступление" },
   { id: "contacts", label: "Контакты" },
@@ -111,7 +122,7 @@ const scrollTo = (id: string) => {
 };
 
 export default function Index() {
-  const [activeProfile, setActiveProfile] = useState("tech");
+  const [activeProfile, setActiveProfile] = useState("fizmat");
   const [menuOpen, setMenuOpen] = useState(false);
   const current = profiles.find((p) => p.id === activeProfile)!;
 
@@ -167,7 +178,7 @@ export default function Index() {
             Профили <span className="text-green-600">10 класса</span>
           </h1>
           <p className="text-lg md:text-xl text-green-800/70 max-w-2xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Выбери направление, которое откроет путь к твоей будущей профессии. Четыре профиля — одна большая цель.
+            Выбери направление, которое откроет путь к твоей будущей профессии. Три профиля — одна большая цель.
           </p>
           <div className="flex flex-wrap justify-center gap-3 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <button onClick={() => scrollTo("profiles")} className="px-6 py-3 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-all duration-200 shadow-md shadow-green-200 hover:shadow-lg hover:-translate-y-0.5">
@@ -208,7 +219,8 @@ export default function Index() {
 
           {/* Profile Card */}
           <div className={`rounded-3xl border-2 p-8 md:p-12 transition-all duration-300 ${current.color}`} key={current.id}>
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            {/* Top row */}
+            <div className="flex flex-col md:flex-row gap-8 items-start mb-10">
               <div className="flex-1">
                 <span className={`inline-block px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider mb-4 ${current.badge}`}>
                   Профиль
@@ -231,38 +243,35 @@ export default function Index() {
                   <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Icon name={current.icon as AnyIcon} size={32} className="text-white" />
                   </div>
-                  <p className="text-green-900 font-bold text-sm">{current.title} профиль</p>
+                  <p className="text-green-900 font-bold text-sm">{current.title}</p>
                   <p className="text-green-600 text-xs mt-1">10–11 класс</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* HISTORY */}
-      <section id="history" className="py-20 px-4 bg-green-50">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-black text-green-950 mb-3">История школы</h2>
-            <p className="text-green-700/70 text-lg">Путь длиной в десятилетия</p>
-          </div>
-          <div className="relative">
-            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-green-200" />
-            <div className="space-y-8">
-              {history.map((h, i) => (
-                <div key={h.year} className="flex gap-6 animate-fade-in" style={{ animationDelay: `${i * 0.08}s` }}>
-                  <div className="relative flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center shadow-md z-10 relative">
-                      <span className="text-white text-xs font-bold">{h.year.slice(2)}</span>
+            {/* History timeline inside card */}
+            <div className="border-t border-green-200/60 pt-8">
+              <p className="text-sm font-bold text-green-700 uppercase tracking-wider mb-6 flex items-center gap-2">
+                <Icon name="Clock" size={14} />
+                История профиля
+              </p>
+              <div className="relative">
+                <div className="absolute left-5 top-0 bottom-0 w-0.5 bg-green-200" />
+                <div className="space-y-5">
+                  {current.history.map((h, i) => (
+                    <div key={h.year} className="flex gap-5 animate-fade-in" style={{ animationDelay: `${i * 0.07}s` }}>
+                      <div className="relative flex-shrink-0 z-10">
+                        <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center shadow-md">
+                          <span className="text-white text-[10px] font-black leading-none">{h.year}</span>
+                        </div>
+                      </div>
+                      <div className="bg-white rounded-xl border border-green-100 px-4 py-3 flex-1 shadow-sm">
+                        <p className="text-green-900/85 text-sm leading-relaxed">{h.event}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="section-card flex-1 mb-0">
-                    <span className="text-green-600 font-black text-xl">{h.year}</span>
-                    <p className="text-green-900/80 mt-1 leading-relaxed">{h.event}</p>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
